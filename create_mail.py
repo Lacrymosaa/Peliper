@@ -15,7 +15,8 @@ def create_database():
 
     # Criar tabela se não existir
     cursor.execute('''CREATE TABLE IF NOT EXISTS address
-                      (emails VARCHAR(255))''')
+                    (id INT AUTO_INCREMENT PRIMARY KEY,
+                    emails VARCHAR(255))''')
 
     # Inserir alguns emails de exemplo
     emails = ['vinicius.silva405@fatec.sp.gov.br', 'luiz.bedim@fatec.sp.gov.br', 'priscila.raminelli@fatec.sp.gov.br',
